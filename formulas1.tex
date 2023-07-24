@@ -1,0 +1,118 @@
+\documentclass{article}
+
+\usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage{marvosym}
+\usepackage[margin = 1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{multirow}
+
+\title{Fórmulas Primer Capítulo del Libro}
+\author{Moises Del Rosario C.I: 29.626.161}
+\date{\today}
+
+\selectlanguage{spanish}
+
+\begin{document}
+\maketitle
+
+\section{ \uppercase{Prestaciones del CPU} }
+
+\subsection{Prestaciones de un computador:}
+
+$$Prestaciones_{X} = \frac{1}{Tiempo\ de\ ejecucion\ de\ un\ programa_{X}}$$
+\
+
+\subsection{Comparación de prestaciones entre equipos:}
+
+$$Prestaciones_{X} > Prestaciones_{Y}$$
+
+$$\equiv$$
+
+$$\frac{1}{Tiempo\ de\ ejecucion\ de\ un\ programa_{X}} > \frac{1}{Tiempo\ de\ ejecucion\ de\ un\ programa_{Y}}$$
+\
+
+$$\equiv$$
+
+$$Tiempo\ de\ ejecucion\ de\ un\ programa_{Y} > Tiempo\ de\ ejecucion\ de\ un\ programa_{X}$$\
+
+\subsection{Relación cuantitativa entre las prestaciones de dos computadores:}
+$$\frac{Prestaciones_{X}}{Prestaciones_{Y}} = n$$
+
+$$\equiv$$
+
+$$\frac{Prestaciones_{X}}{Prestaciones_{Y}} = \frac{Tiempo\ de\ ejecucion\ de\ un\ programa_{Y}}{Tiempo\ de\ ejecucion\ de\ un\ programa_{X}} = n$$
+
+\subsection{Medir prestaciones de un computador en base a otros factores:}
+
+$$Tiempo\ de\ ejecucion\ de\ un\ programa = Ciclos\ del\ programa \ *\ El\ tiempo\ de\ un\ ciclo\ de\ reloj$$
+
+$$\equiv$$
+
+$$Tiempo\ de\ ejecucion\ de\ un\ programa = \frac{Ciclos\ del\ programa}{Frecuencia\ del\ reloj\ del\ computador}$$
+
+\section{ \uppercase{Ciclos e instrucciones del CPU como factores de prestaciones} }
+
+\subsection{Ciclos para un programa en base a prestaciones:}
+
+$$Ciclos\ de\ reloj\ del\ CPU\ para\ un\ programa = N^o\ de\ instrucciones * CPI$$
+
+
+\subsection{Ecuación clásica para medir las prestaciones de la CPU:}
+
+$$Tiempo\ de\ ejecucion = {N^o\ de\ instrucciones} * {CPI} * {Tiempo\ de\ ciclo}$$
+
+$$\equiv$$
+
+$$Tiempo\ de\ ejecucion = \frac{N^o\ de\ instrucciones * CPI}{Frecuencia\ del\ reloj\ del\ computador}$$
+
+
+\subsection{Ecuación elemental de prestaciones con factores simplificados:}
+
+$$\frac{segundos}{instrucciones} = \frac{Instrucciones}{Programa} * \frac{Ciclos\ de\ reloj}{Instruccion} * \frac{Segundos}{Ciclos\ de\ reloj}$$
+
+\section{ \uppercase{Potencia y su relación con las prestaciones - medir la potencia relativa de un procesador en relación con otro} }
+
+$$\frac{Potencia_{nuevo}}{Potencia_{antiguo}} = \frac{Carga\ capacitiva_{nuevo} * Voltaje^2_{nuevo} * Frecuencia_{nuevo}}{Carga\ capacitiva_{antiguo} * Voltaje^2_{antiguo} * Frecuencia_{antiguo}}$$
+
+
+\section{ \uppercase{Circuitos integrados y sus prestaciones de producción} }
+
+\subsection{Coste por dado de silicio:}
+
+$$coste\ por\ dado = \frac{coste\ por\ oblea}{dado\ por\ oblea * factor\ de\ produccion}$$
+
+\subsection{Dados obtenidos por Oblea (lonja) de silicio:}
+
+$$Dados\ por\ oblea = \frac{area\ de\ la\ oblea}{area\ del\ dado}$$
+
+\subsection{Porcentaje de dados sin defectos por tanda(aproximación empírica:}
+
+$$Factor\ de\ produccion =\frac{1}{(1 + (defectos\ por\ area * area\ del\ dado))^2}$$
+
+\section{ \uppercase{Pruebas SPEC (Standard Performance Evaluation Corporation)} }
+
+\subsection{Formula para medir prestaciones con la geométrica para razones SPEC:}
+
+$$n\sqrt{\prod_{i\ =\ 1}^{n} Relaciones\ de\ tiempo\ de\ ejecucion}$$
+
+$$n = Numero\ de\ programas\ en\ la\ carga\ de\ trabajo$$
+$$RTE = Razon\ SPEC\ del\ tiempo\ del\ modelo\ de\ referencia\ entre\ el\ del\ modelo\ nuevo$$
+
+
+\subsection{Formula SPEC para medir prestaciones según el nivel de potencia de un equipo:}
+
+$$ssj\_ops\ global\ por\ vatio = \frac{\sum_{i\ =\ 0}^{10}\ ssj\_ops_{i}}{\sum_{i\ =\ 0}^{10}\ potencia_{i}}$$
+
+\section{ \uppercase{Relación entre mejoras individuales y prestaciones en el computador (Ley de Amdahl)} }
+
+$$Tiempo\ de\ ejecucion\ despues\ de\ la\ mejora = \frac{tiempo\ de\ ejecucion\ de\ la\ mejora}{la\ cantidad\ de\ mejoras} + el\ tiempo\ no\ afectado$$
+
+\section{ \uppercase{MIPS(Millones de Instrucciones Por Segundo)} }
+
+$$MIPS = \frac{N^o\ de\ instrucciones}{tiempo\ de\ ejecucion * 10^{6}}$$
+
+\end{document}
